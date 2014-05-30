@@ -1,0 +1,169 @@
+html 
+{ 
+  /*reference: http://css-tricks.com/perfect-full-page-background-image/ */
+  
+  background: url('bodybg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:275px;
+  height:200px;
+  /*background-color: #FF9999;*/
+}
+
+.option
+{
+	position:absolute; 
+	top:70px;
+}
+
+.option:hover
+{
+	background-color:yellow;
+}
+
+a
+{
+	color: black;
+}
+
+.login 
+{
+	position:relative;
+	top:10px;
+	left:1200px;
+}
+
+.search
+{
+	/*background-color: #FFFFCC;*/
+	width:300px;
+	height: 600px;
+	padding:10px;
+	border: 1px solid #ccc;
+	margin:0px;
+	bottom:635px;
+	background:url('searchbox.jpg')no-repeat;
+    background-size: cover;	
+}
+
+.entry 
+{
+	position:relative;
+	top:30px;
+	right:5px;
+	/*background-color: #99FF66;*/
+	width:600px;
+	height: 190px;
+	padding:10px;
+	border: 1px solid #99CC33;
+	margin:0px;
+	z-index:-1;
+	background:url('entry.jpg') no-repeat;
+    background-size: cover;	
+}
+
+.description
+{
+	position:relative;
+	bottom:190px; /*bigger, upper*/
+	left:275px; /*bigger, more to the right*/
+	width:300px;
+	height: 100px;
+	padding:10px;
+	border: 1px solid #99CC33;
+	margin:0px;
+	z-index:1;
+}
+
+.gender
+{
+	position:relative;
+	bottom:190px; /*bigger, upper*/
+	left:275px; /*bigger, more to the right*/
+	width:100px;
+	height: 15px;
+	padding:10px;
+	border: 1px solid #99CC33;
+	margin:0px;
+	z-index:1;
+}
+
+.view_button
+{
+	position:relative;
+	bottom:195px; /*bigger, upper*/
+	left:265px; /*bigger, more to the right*/
+	width:100px;
+	height: 20px;
+	padding:10px;
+	margin:0px;
+	z-index:1;
+}
+
+.ad1 
+{
+	position:relative;
+	bottom: 1235px;
+	left:1200px;
+}
+
+.ad2
+{
+	position:relative;
+	bottom:1185px;
+	left:1200px;
+}
+
+.tabs 
+{
+  position: relative;   
+  min-height: 200px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+  left:350px;
+  bottom:635px;
+  
+  height: 0px; /*height for 0 entries*/
+  /* heigh should adjust with amount of search result entries, max of 10 entries*/
+  width: 800px;
+}
+.tab 
+{
+  float: left;
+}
+.tab label 
+{
+  background: #FFCC66; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  margin-left: -1px; 
+  position: relative;
+  left: 1px; 
+}
+.tab [type=radio] 
+{
+  display: none;   
+}
+.content 
+{
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: #FFFFCC;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+[type=radio]:checked ~ label 
+{
+  background: #FFFFCC;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content 
+{
+  z-index: 1;
+}
